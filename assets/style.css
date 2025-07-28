@@ -686,6 +686,7 @@ html, body {
         overflow-wrap: break-word;
         word-break: break-word;
         text-align: justify;
+        height: auto;
     }
 
     .caixa_texto h1 {
