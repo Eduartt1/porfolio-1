@@ -5,13 +5,21 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
 /* back video portfolio */
 .back_video {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: -1;
     overflow: hidden;
 
@@ -19,10 +27,22 @@ html {
 }
 
 .back_video video {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
     object-fit: cover;
+    pointer-events: none
 
+}
+
+.conteudo_site {
+    position: relative;
+    z-index: 1;
 }
 
 /* barra de navagacao */
@@ -561,155 +581,110 @@ html {
         color: #ffffff;
     }
 }
+@media (max-width: 767px) {
 
-/* === ESTILOS BASE (Desktop First) === */
-/* ... (Seu CSS atual permanece aqui) ... */
-
-/* RESPONSIVIDADE */
-
-/* Tablets (768px até 1024px) */
-@media (max-width: 1024px) {
     .nav_principal ul {
-        gap: 20px;
-        font-size: 1.2rem;
+        flex-direction: column;
+        gap: 10px;
+        background: rgba(7, 7, 7, 0.9);
+        padding: 20px 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .back_video {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .back_video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .texto_hero {
+        margin-top: 30vh;
+        margin-bottom: 0;
+        padding: 0 10px;
     }
 
     .texto_hero .apresentacao {
-        font-size: 40px;
+        font-size: 24px;
     }
 
     .texto_hero .nome_hero {
-        font-size: 80px;
+        font-size: 36px;
     }
 
     .texto_hero .full_hero {
-        font-size: 40px;
+        font-size: 20px;
     }
 
     .icones_estudos {
-        gap: 40px;
-        font-size: 60px;
+        gap: 15px;
+        font-size: 35px;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .caixa_fosca {
-        width: 250px;
-        height: 250px;
-        margin-right: 0;
+        width: 180px;
+        height: 180px;
+        margin: 30px auto;
     }
 
     .caixa_fosca .caixa_foto img {
-        width: 230px;
-        height: 270px;
+        width: 160px;
+        height: 180px;
     }
 
     .container_sobre {
         flex-direction: column;
+        padding: 10px;
         align-items: center;
     }
 
     .caixa_texto {
+        padding: 20px;
         width: 90%;
         height: auto;
     }
 
-    .caixa_total_skills {
-        flex-wrap: wrap;
-        gap: 40px;
-    }
-
-    .caixa_total_projetos {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    .caixa_total_contato .links {
-        gap: 40px;
-        flex-wrap: wrap;
-    }
-}
-
-/* Mobile (até 767px) */
-@media (max-width: 767px) {
-    .nav_principal ul {
-        flex-direction: column;
-        gap: 10px;
-        background: rgba(7, 7, 7, 0.8);
-        padding: 20px 0;
-    }
-
-    .texto_hero {
-        margin-top: 150px;
-        margin-bottom: 100px;
-    }
-
-    .texto_hero .apresentacao {
-        font-size: 30px;
-    }
-
-    .texto_hero .nome_hero {
-        font-size: 50px;
-    }
-
-    .texto_hero .full_hero {
-        font-size: 30px;
-    }
-
-    .icones_estudos {
-        gap: 20px;
-        font-size: 40px;
-        flex-wrap: wrap;
-    }
-
-    .caixa_fosca {
-        width: 200px;
-        height: 200px;
-        margin: 20px 0;
-    }
-
-    .caixa_fosca .caixa_foto img {
-        width: 180px;
-        height: 220px;
-    }
-
-    .container_sobre {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .caixa_texto {
-        padding: 20px;
-        width: 100%;
-    }
-
     .titulo_skills {
         font-size: 2rem;
-        margin: 50px;
+        margin: 50px 0;
     }
 
     .caixa_total_skills {
         flex-wrap: wrap;
         gap: 20px;
-        font-size: 60px;
+        font-size: 50px;
+        justify-content: center;
     }
 
     .projetos_titulo {
         font-size: 2rem;
-        margin: 50px;
+        margin: 50px 0;
     }
 
     .caixa_total_projetos {
         grid-template-columns: 1fr;
+        padding: 0 10px;
     }
 
     .contato_titulo {
         font-size: 2rem;
-        margin: 50px;
+        margin: 40px 0;
     }
 
     .caixa_total_contato .links {
         flex-direction: column;
         gap: 30px;
         font-size: 50px;
+        align-items: center;
     }
 
     .rodape {
