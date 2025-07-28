@@ -673,6 +673,10 @@ html, body {
         box-sizing: border-box;
     }
 
+    .container_sobre .caixa_texto {
+        height: auto !important; /* Força ignorar o height fixo */
+    }
+
     .caixa_fosca {
         width: 100%;
         max-width: 250px;
@@ -741,6 +745,11 @@ html, body {
 }
 
 @media (max-width: 480px) {
+
+    .container_sobre .caixa_texto {
+        height: auto !important;
+    }
+    
     .caixa_fosca {
         max-width: 200px;
     }
@@ -753,4 +762,3 @@ html, body {
         font-size: 0.95rem;
     }
 }
-
