@@ -1,0 +1,718 @@
+/* fontes textos */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chiron+Hei+HK:ital,wght@0,300;1,300&family=Space+Grotesk:wght@500&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* back video portfolio */
+.back_video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+
+    
+}
+
+.back_video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/* barra de navagacao */
+.nav_principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    background: rgba(7, 7, 7, 0.425);
+    backdrop-filter: blur(10px);
+    z-index: 3;
+
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        padding: 0;
+        margin: 20px;
+    }
+
+    li a {
+        position: relative;
+        font-family: "Space Grotesk", sans-serif;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.5rem;
+        transition: color 0.3s;
+
+
+        &:hover {
+            color: #7DF9FF;
+        }
+    }
+}
+
+/* texto apresentacao hero */
+#hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto_hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 200px;
+    margin-top: 250px;
+
+    .apresentacao {
+        font-family: "Chiron Hei HK", sans-serif;
+        color: #ffffff;
+        font-size: 60px;
+
+    }
+
+    .nome_hero {
+        font-family: "Space Grotesk", sans-serif;
+        color: #ffffff;
+        font-size: 120px;
+        
+    }
+
+    .full_hero {
+        font-family: "Chiron Hei HK", sans-serif;
+        color: #ffffff;
+        font-size: 60px;
+
+    }
+
+}
+
+/* icones abaixo do texto de apresentacao */
+.icones_estudos {
+    color: #ffffff;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    font-size: 80px;
+
+    i {
+        transition: transform 0.4s ease-in-out;
+        animation: brilhoNeon 2s infinite alternate;
+    }
+
+    .fa-html5 {
+        color: #E44D26;
+        text-shadow: 0 0 60px #E44D26, 0 0 60px #ff3300;
+    }
+
+    .fa-css3-alt {
+        color: #264DE4;
+        text-shadow: 0 0 60px #264DE4, 0 0 60px #0033ff;
+    }
+
+    .fa-js {
+        color: #F0DB4F;
+        text-shadow: 0 0 60px #ffdd00;
+    }
+
+    .fa-python {
+        color: #3776AB;
+        text-shadow: 0 0 60px #3776AB, 0 0 60px #008cff;
+    }
+
+    .fa-html5:hover {
+        transform: scale(1.3);
+    }
+
+    .fa-css3-alt:hover {
+        transform: scale(1.3);
+    }
+
+    .fa-js:hover {
+        transform: scale(1.3);
+    }
+
+    .fa-python:hover {
+        transform: scale(1.3);
+    }
+}
+
+/* caixa circulo fosca com foto perfil */
+.caixa_fosca {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin: 50px;
+    color: white;
+    box-shadow: #7DF9FF65 0px 40px 40px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 200px;
+    overflow: hidden;
+
+    .caixa_foto img {
+        width: 320px;
+        height: 370px;
+        border-radius: 50%;
+        margin-top: 40px;
+        /* width: 500px; */
+        /* height: 350px; */
+        border-radius: 150%;
+        object-fit: cover;
+    }
+
+}
+
+/* caixa fosca com sobre  */
+.container_sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 100px auto;
+    padding: 0 20px;
+
+    .caixa_texto {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 50px;
+        color: white;
+        max-width: 700px;
+        height: 450px;
+        box-shadow: #7DF9FF65 0px 40px 40px,
+            rgba(0, 0, 0, 0.12) 0px -12px 30px,
+            rgba(0, 0, 0, 0.12) 0px 4px 6px,
+            rgba(0, 0, 0, 0.17) 0px 12px 13px,
+            rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .titulo_sobre {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 3.5rem;
+        margin-bottom: 15px;
+
+    }
+
+    .caixa_texto p {
+        font-family: "Chiron Hei HK", sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        display: flex;
+    }
+}
+
+/* skills */
+.titulo_skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3.5rem;
+    margin: 100px;
+    color: #ffffff;
+}
+
+.caixa_total_skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0033ff;
+    font-size: 100px;
+    gap: 80px;
+    margin: 100px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+    .caixa_skills i {
+        transition: transform 0.3s ease, filter 0.3s ease;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    .titulo_habilidade {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.1rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    .caixa_skills i.fa-html5 {
+        color: #E44D26;
+        text-shadow: 0 0 90px #E44D26, 0 0 30px #E44D26;
+    }
+
+    .caixa_skills i.fa-css3-alt {
+        color: #264DE4;
+        text-shadow: 0 0 90px #264DE4, 0 0 30px #264DE4;
+    }
+
+    .caixa_skills i.fa-js {
+        color: #F7DF1E;
+        text-shadow: 0 0 90px #F7DF1E, 0 0 30px #F7DF1E;
+    }
+
+    .caixa_skills i.fa-python {
+        color: #3776AB;
+        text-shadow: 0 0 90px #3776AB, 0 0 30px #3776AB;
+    }
+
+    .caixa_skills i.fa-react {
+        color: #61DAFB;
+        text-shadow: 0 0 90px #61DAFB, 0 0 30px #61DAFB;
+
+    }
+
+    .caixa_skills i.fa-git-alt {
+        color: #F05032;
+        text-shadow: 0 0 90px #F05032, 0 0 30px #F05032;
+    }
+
+    .caixa_skills i.fa-figma {
+        color: #F24E1E;
+        text-shadow: 0 0 90px #F24E1E, 0 0 30px #F24E1E;
+    }
+
+    .caixa_skills i.fa-database {
+        color: #00758F;
+        text-shadow: 0 0 90px #00758F, 0 0 30px #00758F;
+        
+    }
+}
+
+/* titulo projeto */
+.projetos_titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3.5rem;
+    margin: 100px;
+    color: #ffffff;
+}
+
+/* caixa de projetos */
+.caixa_total_projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 4rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    .card_projeto {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+        transition: 0.5s;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card_projeto .imagem_projeto {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .card_projeto .fundo_fusco {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .card_projeto .info {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(0.9px);
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        opacity: 0;
+
+    }
+
+    .card_projeto .info a {
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Conteúdos Info */
+    .card_projeto .info .inf_projetos {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .card_projeto .info .paragrafo_projeto {
+        font-family: "Chiron Hei HK", sans-serif;
+        font-size: 0.9rem;
+        text-align: center;
+        padding: 8px 12px;
+        line-height: 1.4;
+    }
+
+    .card_projeto .info .icones_projetos {
+        display: flex;
+        gap: 20px;
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    /* Icones Cores */
+    .card_projeto .info .icones_projetos .fa-html5 {
+        color: #E44D26;
+        text-shadow: 0 0 10px #ff3300c2;
+    }
+
+    .card_projeto .info .icones_projetos .fa-css3-alt {
+        color: #264DE4;
+        text-shadow: 0 0 10px #0033ffbe;
+    }
+}
+
+/* Hover dos projetos */
+.card_projeto:hover .imagem_projeto {
+    transform: scale(1.1);
+}
+
+.card_projeto:hover .fundo_fusco {
+    opacity: 1;
+}
+
+.card_projeto:hover .info {
+    top: 0;
+    opacity: 1;
+}
+
+.caixa_total_projetos:hover .card_projeto:not(:hover) {
+    filter: blur(4px);
+}
+
+.card_projeto:hover {
+    transform: scale(1.1);
+    box-shadow: #7DF9FF65 0px 40px 40px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    z-index: 2;
+}
+
+/* contatos */
+.contato {
+    display: flex;
+    flex-direction: column;
+
+    .contato_titulo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 3.5rem;
+        margin: 80px;
+        color: #ffffff;
+    }
+
+    .caixa_total_contato .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+        color: #ffffff;
+        font-size: 80px;
+        margin-bottom: 70px;
+    }
+
+    .links a {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .links>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .links>div:hover {
+        transform: scale(1.2);
+    }
+
+    .fa-github {
+        color: #ffffff;
+        text-shadow: 0 0 40px #ffffff;
+    }
+
+    .fa-linkedin {
+        color: #0A66C2;
+        text-shadow: 0 0 40px #0A66C2;
+    }
+
+    .fa-envelope {
+        color: #D44638;
+        text-shadow: 0 0 40px #D44638;
+    }
+
+    .fa-instagram {
+        color: #E4405F;
+        text-shadow: 0 0 40px #E4405F;
+    }
+
+    .titulo_links {
+        margin-top: 10px;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.5rem;
+        color: #ffffff;
+    }
+}
+
+/* footer */
+.rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(7, 7, 7, 0.425);
+    backdrop-filter: blur(0.5px);
+    padding: 20px;
+    margin-top: 20px;
+
+    .meu_nome {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Chiron Hei HK", sans-serif;
+        /* font-family: "Bebas Neue", sans-serif; */
+        color: #ffffff;
+        font-size: 1rem;
+
+    }
+
+    .texto_rodape {
+        font-family: "Chiron Hei HK", sans-serif;
+        font-size: 0.7rem;
+        line-height: 1.6;
+        display: flex;
+        color: #ffffff;
+    }
+}
+
+/* === ESTILOS BASE (Desktop First) === */
+/* ... (Seu CSS atual permanece aqui) ... */
+
+/* RESPONSIVIDADE */
+
+/* Tablets (768px até 1024px) */
+@media (max-width: 1024px) {
+    .nav_principal ul {
+        gap: 20px;
+        font-size: 1.2rem;
+    }
+
+    .texto_hero .apresentacao {
+        font-size: 40px;
+    }
+
+    .texto_hero .nome_hero {
+        font-size: 80px;
+    }
+
+    .texto_hero .full_hero {
+        font-size: 40px;
+    }
+
+    .icones_estudos {
+        gap: 40px;
+        font-size: 60px;
+        flex-wrap: wrap;
+    }
+
+    .caixa_fosca {
+        width: 250px;
+        height: 250px;
+        margin-right: 0;
+    }
+
+    .caixa_fosca .caixa_foto img {
+        width: 230px;
+        height: 270px;
+    }
+
+    .container_sobre {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caixa_texto {
+        width: 90%;
+        height: auto;
+    }
+
+    .caixa_total_skills {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .caixa_total_projetos {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .caixa_total_contato .links {
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+}
+
+/* Mobile (até 767px) */
+@media (max-width: 767px) {
+    .nav_principal ul {
+        flex-direction: column;
+        gap: 10px;
+        background: rgba(7, 7, 7, 0.8);
+        padding: 20px 0;
+    }
+
+    .texto_hero {
+        margin-top: 150px;
+        margin-bottom: 100px;
+    }
+
+    .texto_hero .apresentacao {
+        font-size: 30px;
+    }
+
+    .texto_hero .nome_hero {
+        font-size: 50px;
+    }
+
+    .texto_hero .full_hero {
+        font-size: 30px;
+    }
+
+    .icones_estudos {
+        gap: 20px;
+        font-size: 40px;
+        flex-wrap: wrap;
+    }
+
+    .caixa_fosca {
+        width: 200px;
+        height: 200px;
+        margin: 20px 0;
+    }
+
+    .caixa_fosca .caixa_foto img {
+        width: 180px;
+        height: 220px;
+    }
+
+    .container_sobre {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .caixa_texto {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .titulo_skills {
+        font-size: 2rem;
+        margin: 50px;
+    }
+
+    .caixa_total_skills {
+        flex-wrap: wrap;
+        gap: 20px;
+        font-size: 60px;
+    }
+
+    .projetos_titulo {
+        font-size: 2rem;
+        margin: 50px;
+    }
+
+    .caixa_total_projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .contato_titulo {
+        font-size: 2rem;
+        margin: 50px;
+    }
+
+    .caixa_total_contato .links {
+        flex-direction: column;
+        gap: 30px;
+        font-size: 50px;
+    }
+
+    .rodape {
+        text-align: center;
+    }
+}
