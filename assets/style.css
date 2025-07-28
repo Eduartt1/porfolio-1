@@ -732,4 +732,23 @@ html, body {
     .rodape {
         text-align: center;
     }
+
+    @media (max-width: 767px) {
+    .sobre-container { /* Ajuste para o nome da sua classe */
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .sobre-container p, 
+    .sobre-container h2, 
+    .sobre-container span {
+        font-size: 1rem;
+        line-height: 1.5;
+        word-wrap: break-word;
+    }
 }
+}
+
